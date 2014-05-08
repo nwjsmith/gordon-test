@@ -1,6 +1,10 @@
 machine:
   python:
-    version: 2.7.4
+    version: 3.4.0
+
+checkout:
+  post:
+    - pyvenv venv
 
 dependencies:
   pre:
