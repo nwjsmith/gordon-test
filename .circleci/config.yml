@@ -58,9 +58,13 @@ workflows:
   build-n-deploy:
     jobs:
       - build
+      - approve:
+          type: approval
+          requires:
+            - build
       - deploy:
           filters:
             branches:
               only: /m.ster/
           requires:
-            - build
+            - approve
