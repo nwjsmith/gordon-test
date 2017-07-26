@@ -71,8 +71,5 @@ workflows:
           requires:
             - build
       - deploy:
-          filters:
-            branches:
-              only: /m.ster/
           requires:
             - build
