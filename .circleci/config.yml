@@ -54,7 +54,7 @@ jobs:
       - run: cat ${CIRCLE_UPSTREAM_ARTIFACTS}/build/0/text-data/second
 
 workflows:
-  version: 2
+  version: scheduled-workflows-mvp
   build-n-deploy:
     jobs:
       - build
