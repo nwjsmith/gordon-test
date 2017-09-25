@@ -67,7 +67,7 @@ workflows:
   scheduleme:
     triggers:
       - type: scheduled
-        frequency: "0 */20 * * * ?"
+        frequency: "0 */5 * * * ?"
         branches:
           - master
     jobs:
