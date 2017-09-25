@@ -64,17 +64,17 @@ workflows:
       - deploy:
           requires:
             - build
-  scheduleme:
-    triggers:
-      - type: scheduled
-        frequency: "0 */20 * * * ?"
-        branches:
-          - master
-    jobs:
-      - build
-      - fail:
-          requires:
-            - build
-      - deploy:
-          requires:
-            - build
+  # scheduleme:
+  #   triggers:
+  #     - type: scheduled
+  #       frequency: "0 */20 * * * ?"
+  #       branches:
+  #         - master
+  #   jobs:
+  #     - build
+  #     - fail:
+  #         requires:
+  #           - build
+  #     - deploy:
+  #         requires:
+  #           - build
