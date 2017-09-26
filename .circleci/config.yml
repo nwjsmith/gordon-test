@@ -70,6 +70,7 @@ workflows:
         frequency: "0 */5 * * * ?"
         branches:
           - master
+      - type: push
     jobs:
       - build
       - fail:
