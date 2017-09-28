@@ -55,7 +55,7 @@ jobs:
 
 workflows:
   version: scheduled-workflows-mvp
-  build-n-deploy:
+  pipeline:
     jobs:
       - build
       - fail:
@@ -64,7 +64,7 @@ workflows:
       - deploy:
           requires:
             - build
-  scheduleme:
+  nightly:
     triggers:
       - type: scheduled
         frequency: "0 */5 * * * ?"
