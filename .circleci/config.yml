@@ -67,7 +67,7 @@ workflows:
   nightly:
     triggers:
       - type: scheduled
-        frequency: "0 * * * * *"
+        frequency: "0 * * * ? *"
         branches:
           - master
     jobs:
