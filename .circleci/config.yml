@@ -64,3 +64,17 @@ workflows:
       - deploy:
           requires:
             - build
+  nightly:
+    triggers:
+      - type: scheduled
+        frequency: "0 0/2 * ? * *"
+        branches:
+          - master
+    jobs:
+      - build
+      - fail:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - build
