@@ -54,8 +54,14 @@ jobs:
       - run: cat ${CIRCLE_UPSTREAM_ARTIFACTS}/build/0/text-data/second
 
 workflows:
-  version: scheduled-workflows-mvp
+  version: 2
   pipeline:
+    triggers:
+      - type: schedule
+        cron: "0 50,55,59 * * *"
+        branches:
+          only:
+            - master
     jobs:
       - build
       - fail:
