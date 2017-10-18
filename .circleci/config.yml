@@ -58,7 +58,7 @@ workflows:
   pipeline:
     triggers:
       - type: schedule
-        cron: "0 5,10,15,20,25,30 * * *"
+        cron: "* * 18 10 3"
         branches:
           only:
             - master
