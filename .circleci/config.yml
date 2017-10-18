@@ -59,9 +59,10 @@ workflows:
     triggers:
       - schedule:
           cron: "* * 18 10 3"
-          branches:
-            only:
-              - master
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build
       - fail:
