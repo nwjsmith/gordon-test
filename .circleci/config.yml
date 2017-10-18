@@ -57,11 +57,11 @@ workflows:
   version: 2
   pipeline:
     triggers:
-      - type: schedule
-        cron: "* * 18 10 3"
-        branches:
-          only:
-            - master
+      - schedule:
+          cron: "* * 18 10 3"
+          branches:
+            only:
+              - master
     jobs:
       - build
       - fail:
