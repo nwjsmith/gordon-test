@@ -16,5 +16,5 @@ workflows:
   pipeline:
     jobs:
       - build:
-          context: custom-name
+          context: non-existent-name
 
