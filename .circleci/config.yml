@@ -7,14 +7,16 @@ jobs:
     resource_class: small
     steps:
       - checkout
-
       - run:
-          command: echo ${CONTEXT_VARIABLE}
-          name: Print custom context variable
+          command: echo HI
+
 workflows:
   version: 2
   pipeline:
     jobs:
+      - hold:
+          type: approval
       - build:
-          context: non-existent-name
+          require:
+            - hold
 
