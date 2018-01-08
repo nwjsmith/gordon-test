@@ -8,15 +8,26 @@ jobs:
     steps:
       - checkout
       - run:
-          command: echo HI
+          command: echo ${CONTEXT_ENV_VAR}
 
 workflows:
   version: 2
+  every-minute:
+    triggers:
+      - schedule:
+          cron: '* * * * *'
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
   pipeline:
     jobs:
       - hold:
           type: approval
       - build:
+          context: org-global
           requires:
             - hold
 
