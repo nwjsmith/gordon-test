@@ -15,7 +15,7 @@ workflows:
   every-minute:
     triggers:
       - schedule:
-          cron: '* * * * *'
+          cron: '15 * * * *'
           filters:
             branches:
               only:
