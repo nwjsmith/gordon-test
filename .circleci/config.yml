@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: echo ${CONTEXT_ENV_VAR}
+          command: echo Context variable is ${CONTEXT_ENV_VAR}
 
 workflows:
   version: 2
