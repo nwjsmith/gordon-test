@@ -12,17 +12,6 @@ jobs:
 
 workflows:
   version: 2
-  every-minute:
-    triggers:
-      - schedule:
-          cron: '* * * * *'
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - build:
-          context: org-global
   pipeline:
     jobs:
       - hold:
