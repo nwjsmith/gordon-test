@@ -21,7 +21,8 @@ workflows:
               only:
                 - master
     jobs:
-      - build
+      - build:
+          context: org-global
   pipeline:
     jobs:
       - hold:
