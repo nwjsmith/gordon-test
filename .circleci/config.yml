@@ -14,10 +14,4 @@ workflows:
   version: 2
   pipeline:
     jobs:
-      - hold:
-          type: approval
-      - build:
-          context: org-global
-          requires:
-            - hold
-
+      - build
