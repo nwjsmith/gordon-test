@@ -17,11 +17,11 @@ workflows:
       - build
   scheduled:
     triggers:
-      schedule:
-        cron: '* * * * *'
-        filters:
-          branches:
-            only:
-              - master
+      - schedule:
+          cron: '* * * * *'
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build
