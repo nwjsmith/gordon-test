@@ -31,12 +31,14 @@ jobs:
 
 workflows:
   version: 2
-  pipeline:
+  nightly:
+    triggers:
+      - schedule:
+          cron: "* * * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - build
-      - test:
-          requires:
-            - build
-      - deploy:
-          requires:
-            - test
+
