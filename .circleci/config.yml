@@ -34,3 +34,4 @@ workflows:
   pipeline:
     jobs:
       - build
+      - test
