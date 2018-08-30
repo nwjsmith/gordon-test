@@ -33,6 +33,5 @@ workflows:
   version: 2
   pipeline:
     jobs:
-      - build:
-          context: my-context
       - test
+      - deploy
