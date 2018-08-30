@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: echo testing
+          command: sleep 10 && echo testing
 
   deploy:
     docker:
@@ -27,7 +27,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: echo deploying
+          command: sleep 10 && echo deploying
 
 workflows:
   version: 2
