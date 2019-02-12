@@ -31,7 +31,13 @@ jobs:
 
 workflows:
   version: 2
-  pipeline:
+  scheduled:
+    triggers:
+      schedule:
+        cron: '* * * * *'
+        filters:
+          branches:
+            only:
+              - master
     jobs:
       - test
-      - deploy
