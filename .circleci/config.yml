@@ -33,11 +33,11 @@ workflows:
   version: 2
   scheduled:
     triggers:
-      schedule:
-        cron: '* * * * *'
-        filters:
-          branches:
-            only:
-              - master
+      - schedule:
+          cron: '* * * * *'
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - test
