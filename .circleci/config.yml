@@ -33,4 +33,8 @@ workflows:
   version: 2
   pipeline:
     jobs:
-      - test
+      - test:
+          filters:
+            branches: master
+      - deploy:
+          requires: [test]
