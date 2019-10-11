@@ -14,3 +14,15 @@ workflows:
   pipeline:
     jobs:
       - build
+
+  scheduled:
+    triggers:
+      - schedule:
+          cron: '* * * * *'
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
+
